@@ -4,7 +4,7 @@ channels:
   - defaults
 dependencies:
   - python=3.11
-  - abinit=10.0.3
+  - gpaw=24.6.0
   - alamode=1.4.2
   - ase=3.23.0
   - numpy=1.26.0
@@ -12,7 +12,4 @@ dependencies:
   - scipy=1.11.0
   - tqdm=4.66.0
   - jupyterlab=4.0.0
-  - ipykernel=6.27.0
-  - pip=23.0
-  - pip:
-    - --no-deps
+  - ipykernel
