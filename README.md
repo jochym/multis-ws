@@ -1,22 +1,26 @@
-# MULTIS Workshop - Ab Initio Methods
+# MULTIS Workshop - Environment Configuration
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jochym/multis-ws/main?urlpath=lab)
+This branch contains **only the environment configuration** for the MULTIS workshop.
 
-Workshop materials for the MULTIS conference covering ab initio methods in solid state physics.
-Based on materials from [abinitio-methods](https://github.com/jochym/abinitio-methods).
+## Files
 
-## Notebooks (to be added)
+- `environment.yml` - Conda environment (abinit, alamode, ase, numpy, matplotlib, scipy, jupyterlab)
+- `apt.txt` - System packages (openmpi-bin, libopenmpi-dev)
+- `requirements.txt` - Pip packages (reserved)
+- `postBuild` - Runs once after build (kernel install, verification)
+- `start` - Runs at each session start (PATH, env vars)
 
-1. Crystal Building & Ground State Calculations
-2. Phonon Dispersion Curves (Finite Displacements / DFPT)
+## Build
 
-## Environment
+This branch is built by mybinder.org to create the Docker image.
+Content (notebooks, data) is pulled from `main` branch at runtime via nbgitpuller.
 
-- Ubuntu 24.04 base (mybinder.org)
-- abinit 9.10.4 (system package via apt)
-- abinit-data (pseudopotentials)
-- ASE, numpy, matplotlib, scipy (via conda)
+## Local Development
 
-## Launch
+```bash
+# Build with repo2docker
+repo2docker --editable .
 
-Click the Binder badge above to launch the interactive environment.
+# Or use binder locally
+binder-build .
+```
