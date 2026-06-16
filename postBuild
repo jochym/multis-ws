@@ -13,14 +13,6 @@ python -m ipykernel install --user --name=python3
 echo "Checking abinit..."
 abinit --version || true
 
-# Verify anphon (downloaded binary in scripts/)
-if [ -f "scripts/anphon" ]; then
-    chmod +x scripts/anphon
-    echo "anphon binary found at scripts/anphon"
-else
-    echo "WARNING: anphon binary not found in scripts/"
-fi
-
 # Verify pseudopotentials
 if [ -d "psp" ]; then
     echo "Pseudopotentials found in psp/"
