@@ -1,2 +1,0 @@
-# Additional pip packages if needed
-# (most packages are in environment.yml via conda-forge)
