@@ -17,7 +17,7 @@ Based on materials from [abinitio-methods](https://github.com/jochym/abinitio-me
 
 Built from `env` branch via mybinder.org two-layer setup:
 
-- **Environment** (`env` branch): Ubuntu 24.04 + conda packages (abinit 9.8.4, ase 3.28.0, numpy 2.4.6, matplotlib 3.10.9, scipy 1.17.1, jupyterlab 4.5.8, nbgitpuller, python 3.11) + openMPI
+- **Environment** (`env` branch): Ubuntu 24.04 + abinit 9.10.4 (apt), abinit-data (apt), openMPI (apt) + conda packages (ase 3.28.0, numpy 2.4.6, matplotlib 3.10.9, scipy 1.17.1, jupyterlab 4.5.8, nbgitpuller, python 3.11)
 - **Content** (`main` branch): Notebooks, data files, pseudopotentials, scripts - pulled at runtime via nbgitpuller
 
 This separation means changing notebooks does **not** trigger environment rebuilds.
