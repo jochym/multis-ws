@@ -9,14 +9,14 @@ echo "Setting up workshop environment..."
 # Install kernel
 python -m ipykernel install --user --name=python3
 
-# Verify abinit
+# Verify abinit (from apt)
 echo "Checking abinit..."
 abinit --version || true
 
-# Verify pseudopotentials
-if [ -d "psp" ]; then
-    echo "Pseudopotentials found in psp/"
-    ls psp/
+# Verify pseudopotentials from abinit-data
+if [ -d "/usr/share/abinit/data/psps" ]; then
+    echo "Pseudopotentials found in /usr/share/abinit/data/psps"
+    ls /usr/share/abinit/data/psps/ | head -10
 fi
 
 # Verify data files
