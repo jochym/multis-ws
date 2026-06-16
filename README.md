@@ -1,6 +1,6 @@
 # MULTIS Workshop - Ab Initio Methods
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jochym/multis-ws/env?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fjochym%252Fmultis-ws%26urlpath%3Dlab%252Fworkspaces%252Fmultis-ws%252Ftree%252Fmultis-ws%252F%26branch%3Dmaster)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jochym/multis-ws/env?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fjochym%252Fmultis-ws%26urlpath%3Dlab%252Fworkspaces%252Fmultis-ws%252Ftree%252Fmultis-ws%252F%26branch%3Dmain)
 
 Workshop materials for the MULTIS conference covering ab initio methods in solid state physics.
 Based on materials from [abinitio-methods](https://github.com/jochym/abinitio-methods).
@@ -23,5 +23,5 @@ Based on materials from [abinitio-methods](https://github.com/jochym/abinitio-me
 Click the Binder badge above to launch the interactive environment.
 
 The environment is built from the `env` branch (config files only).
-Content (notebooks, data) is pulled from `master` branch at runtime via nbgitpuller.
+Content (notebooks, data) is pulled from `main` branch at runtime via nbgitpuller.
 This way, changing notebooks does not trigger environment rebuilds.
