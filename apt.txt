@@ -1,0 +1,4 @@
+abinit
+abinit-data
+openmpi-bin
+libopenmpi-dev
