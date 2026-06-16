@@ -1,18 +1,36 @@
 #!/bin/bash
-# postBuild script for mybinder.org
-# Installs Python packages after apt packages from apt.txt
+# postBuild script for repo2docker/mybinder
+# Runs once after the environment is built
 
 set -e
 
-echo "Installing Python packages via pip..."
-
-# Upgrade pip
-pip install --upgrade pip
-
-# Install Python packages
-pip install ase numpy matplotlib scipy tqdm jupyterlab ipykernel
+echo "Setting up workshop environment..."
 
 # Install kernel
 python -m ipykernel install --user --name=python3
+
+# Verify abinit
+echo "Checking abinit..."
+abinit --version || true
+
+# Verify anphon (downloaded binary in scripts/)
+if [ -f "scripts/anphon" ]; then
+    chmod +x scripts/anphon
+    echo "anphon binary found at scripts/anphon"
+else
+    echo "WARNING: anphon binary not found in scripts/"
+fi
+
+# Verify pseudopotentials
+if [ -d "psp" ]; then
+    echo "Pseudopotentials found in psp/"
+    ls psp/
+fi
+
+# Verify data files
+if [ -d "data" ]; then
+    echo "Data files found in data/"
+    ls data/
+fi
 
 echo "postBuild completed successfully!"

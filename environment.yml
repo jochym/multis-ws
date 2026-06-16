@@ -4,7 +4,7 @@ channels:
   - defaults
 dependencies:
   - python=3.11
-  - gpaw=24.6.0
+  - abinit=9.8.4
   - alamode=1.4.2
   - ase=3.23.0
   - numpy=1.26.0
