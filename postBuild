@@ -1,0 +1,18 @@
+#!/bin/bash
+# postBuild script for mybinder.org
+# Installs Python packages after apt packages from apt.txt
+
+set -e
+
+echo "Installing Python packages via pip..."
+
+# Upgrade pip
+pip install --upgrade pip
+
+# Install Python packages
+pip install ase numpy matplotlib scipy tqdm jupyterlab ipykernel
+
+# Install kernel
+python -m ipykernel install --user --name=python3
+
+echo "postBuild completed successfully!"
